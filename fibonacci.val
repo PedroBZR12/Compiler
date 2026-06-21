@@ -1,0 +1,33 @@
+int main() {
+    int n = input;
+
+    // Casos base: se n for menor ou igual a 0, retorna 0
+    if (n <= 0) {
+        print("0\n");
+        return 0;
+    }
+
+    // Se n for 1, o número de Fibonacci é 1
+    if (n == 1) {
+        print("1\n");
+        return 0;
+    }
+
+    // Variáveis para controlar os termos da sequência
+    int penultimo = 0;
+    int ultimo = 1;
+    int atual = 0;
+    
+    int i = 2;
+    while (i <= n) {
+        atual = ultimo + penultimo;
+        penultimo = ultimo;
+        ultimo = atual;
+        
+        i = i + 1;
+    }
+
+    // Imprime o n-ésimo número de Fibonacci correspondente
+    print("{atual}\n");
+    return 0;
+}

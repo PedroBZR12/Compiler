@@ -1,0 +1,31 @@
+int main() {
+    int n = input;
+    
+    while (n % 2 == 0) {
+        int f = 2;
+        print("{f} ");
+        n = n / 2;
+    }
+    
+    int i = 3;
+    while (i * i < n) {
+        while (n % i == 0) {
+            print("{i} ");
+            n = n / i;
+        }
+        i = i + 2;
+    }
+    
+    if (i * i == n) {
+        while (n % i == 0) {
+            print("{i} ");
+            n = n / i;
+        }
+    }
+    
+    if (n > 2) {
+        print("{n} ");
+    }
+    
+    return 0;
+}
