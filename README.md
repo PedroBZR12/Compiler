@@ -1,19 +1,19 @@
-Como professor decidiu usar ingles, usaremos russo aqui
-# РУКОВОДЯЩИЕ ПРИНЦИПЫ
-## Студенты
+# Compiler-Creation
+# ORIENTAÇÕES
+## Alunos
 - Amora Marinho Machado
 - Enzo Dante Mícoli
 - Pedro Bizzari
 
-## Удобства
-Для начала убедитесь, что вы выполнили следующую команду:
+## Instalações
+Primeiro garanta que você tenha feito o seguinte comando:
 - `sudo apt install flex bison llvm nasm`
 - `sudo apt install build-essential`
-- Далее извлеките файлы в свою папку и запустите их оттуда `make` а затем будет создан компилятор
-- Компилятор называется `valc`, Итак, чтобы скомпилировать файл, выполните следующие действия: `./valc meuPrograma.val`
-- затем запустите программу с помощью `./meuPrograma` (В данном случае это сгенерированный исполняемый файл)
+- em seguida extraia os arquivos para sua pasta e dentro dela rode `make` e então irá criar o compilador
+- compilador se chama `valc`, então para compilar um arquivo faça: `./valc meuPrograma.val`
+- então rode o programa com `./meuPrograma` (no caso esse é o executável gerado)
 
-## пример программы
+## exemplo de programa
 ```cpp
 int main(){
     int x = 0;
@@ -34,22 +34,22 @@ int main(){
 }
 ```
 
-## некоторые ключевые подсказки использовались
-- ИИ использовался, Copilot e Claude
+## alguns prompts principais utilizados
+- IA utilizadas, Copilot e Claude
 
-### Команды:
-- Что мне нужно установить через sudo, чтобы создать компилятор?
+### Prompts:
+- O que preciso instalar no sudo para criar um compilador?
 - - ```sh
 sudo apt install flex bison llvm nasm
 sudo apt install build-essential```
 
-- как работает команда `make`?
-- - Команда make ищет файл с именем Makefile в текущем каталоге.
-- - Этот файл содержит правила компиляции (например, преобразование файлов .l в .c, .y в .c, а затем компиляция всего содержимого с помощью g++).
-- - При запуске команды `make` генерируется окончательный исполняемый файл компилятора (обычно называемый `compiler`, `a.out` или любым другим именем, указанным в файле Makefile).
+- como funciona o comando `make`?
+- - O comando make procura um arquivo chamado Makefile no diretório atual.
+- - Esse arquivo contém as regras de compilação (como transformar .l em .c, .y em .c, e depois compilar tudo com g++).
+- - Ao rodar make, ele gera o executável final do compilador (normalmente chamado compiler, a.out ou o nome que você definir no Makefile).
 
-- Что необходимо для создания исполняемого файла?
-- - Файл ast.hpp отвечает за создание исполняемого файла вашей программы после компиляции.
+- O que precisa para gerar o executável?
+- - arquivo ast.hpp ele é o responsável por criar o executável do seu programa após compilar
 
-- Создайте простой и полный пример компилятора.
-- - Здесь искусственный интеллект создал пример компилятора, который мы используем для работы над нашим проектом компилятора.
+- Crie um exemplo simples e completo de um compilador
+- - aqui a ia criou um exemplo de compilador onde usamos para trabalhar no nosso projeto de compiladores
