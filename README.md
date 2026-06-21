@@ -1,19 +1,19 @@
-# Compiler-Creation
-# ORIENTAÇÕES
-## Alunos
+Como professor decidiu usar ingles, usaremos russo aqui
+# РУКОВОДЯЩИЕ ПРИНЦИПЫ
+## Студенты
 - Amora Marinho Machado
 - Enzo Dante Mícoli
 - Pedro Bizzari
 
-## Instalações
-Primeiro garanta que você tenha feito o seguinte comando:
+## Удобства
+Для начала убедитесь, что вы выполнили следующую команду:
 - `sudo apt install flex bison llvm nasm`
 - `sudo apt install build-essential`
-- em seguida extraia os arquivos para sua pasta e dentro dela rode `make` e então irá criar o compilador
-- compilador se chama `valc`, então para compilar um arquivo faça: `./valc meuPrograma.val`
-- então rode o programa com `./meuPrograma` (no caso esse é o executável gerado)
+- Далее извлеките файлы в свою папку и запустите их оттуда `make` а затем будет создан компилятор
+- Компилятор называется `valc`, Итак, чтобы скомпилировать файл, выполните следующие действия: `./valc meuPrograma.val`
+- затем запустите программу с помощью `./meuPrograma` (В данном случае это сгенерированный исполняемый файл)
 
-## exemplo de programa
+## пример программы
 ```cpp
 int main(){
     int x = 0;
@@ -33,3 +33,23 @@ int main(){
     return 0;
 }
 ```
+
+## некоторые ключевые подсказки использовались
+- ИИ использовался, Copilot e Claude
+
+### Команды:
+- Что мне нужно установить через sudo, чтобы создать компилятор?
+- - ```sh
+sudo apt install flex bison llvm nasm
+sudo apt install build-essential```
+
+- как работает команда `make`?
+- - Команда make ищет файл с именем Makefile в текущем каталоге.
+- - Этот файл содержит правила компиляции (например, преобразование файлов .l в .c, .y в .c, а затем компиляция всего содержимого с помощью g++).
+- - При запуске команды `make` генерируется окончательный исполняемый файл компилятора (обычно называемый `compiler`, `a.out` или любым другим именем, указанным в файле Makefile).
+
+- Что необходимо для создания исполняемого файла?
+- - Файл ast.hpp отвечает за создание исполняемого файла вашей программы после компиляции.
+
+- Создайте простой и полный пример компилятора.
+- - Здесь искусственный интеллект создал пример компилятора, который мы используем для работы над нашим проектом компилятора.
